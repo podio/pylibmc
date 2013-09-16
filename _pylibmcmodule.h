@@ -187,7 +187,9 @@ static PylibMC_Behavior PylibMC_behaviors[] = {
     { MEMCACHED_BEHAVIOR_CONNECT_TIMEOUT, "connect_timeout" },
     { MEMCACHED_BEHAVIOR_SND_TIMEOUT, "send_timeout" },
     { MEMCACHED_BEHAVIOR_RCV_TIMEOUT, "receive_timeout" },
+#if LIBMEMCACHED_VERSION_HEX >= 0x00033000
     { MEMCACHED_BEHAVIOR_NUMBER_OF_REPLICAS, "num_replicas" },
+#endif
     { MEMCACHED_BEHAVIOR_AUTO_EJECT_HOSTS, "auto_eject" },
     { MEMCACHED_BEHAVIOR_RETRY_TIMEOUT, "retry_timeout" },
 #if LIBMEMCACHED_VERSION_HEX >= 0x00049000
